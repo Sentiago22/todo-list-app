@@ -2,7 +2,8 @@
 
 function addTask(taskContent) {
   if (!taskContent) {
-    throw new Error('Task content cannot be empty.');
+    alert('Please enter a task.'); // UI alert as request Hieuminh0500
+    return null; // Required return so ESLint doesn't have errors
   }
 
   return `New task added: ${taskContent}`;
