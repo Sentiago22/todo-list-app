@@ -14,12 +14,12 @@ function getTaskById(taskId) {
 // Функция для редактирования задачи
 function editTask(taskId, newContent) {
   if (!newContent) {
-    throw new Error('Новое содержание задачи не может быть пустым');
+    return { error: 'Новое содержание задачи не может быть пустым' }; // editTask function "throw new Error"
   }
 
   const task = getTaskById(taskId);
   if (!task) {
-    throw new Error(`Задача с id ${taskId} не найдена`);
+    return { error: `Задача с id ${taskId} не найдена` }; // editTask function "throw new Error"
   }
 
   task.content = newContent;
