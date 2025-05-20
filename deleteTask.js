@@ -7,6 +7,7 @@ const tasks = [
 ];
 
 // Функция для удаления задачи по id
+// add logging and improve error message
 function deleteTask(taskId) {
   const index = tasks.findIndex((task) => task.id === taskId);
   if (index === -1) {
